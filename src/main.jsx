@@ -151,11 +151,11 @@ function App() {
   if (!session) return <Auth mode={authMode} setMode={setAuthMode} auth={auth} setAuth={setAuth} submit={authSubmit} reset={resetPassword} message={message}/>;
 
   const sorted = [...items].sort((a,b)=>a.expiry_date.localeCompare(b.expiry_date));
-  const counts = useMemo(() => {
-    let expired=0, soon=0;
-    items.forEach(i=>{const d=daysUntil(i.expiry_date); if(d<0) expired++; else if(d<=3) soon++;});
-    return {expired,soon};
-  },[items]);
+  const counts = (() => {
+  let expired=0, soon=0;
+  items.forEach(i=>{const d=daysUntil(i.expiry_date); if(d<0) expired++; else if(d<=3) soon++;});
+  return {expired,soon};
+})();
 
   return <div className="app">
     <header className="header">
