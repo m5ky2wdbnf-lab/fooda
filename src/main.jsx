@@ -4,9 +4,9 @@ import { createClient } from "@supabase/supabase-js";
 import "./styles.css";
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 
 const CATEGORIES = ["肉類","魚介類","野菜類","乳製品","卵・大豆製品","主食・パン","調味料","その他"];
 const DEFAULT_SETTINGS = { days_7: true, days_3: true, days_1: true, same_day: true, expired: false };
