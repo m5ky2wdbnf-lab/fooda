@@ -1,0 +1,9 @@
+{
+  "name": "食材期限リマインダー",
+  "short_name": "食材リマインダー",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "lang": "ja"
+}
